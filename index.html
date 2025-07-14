@@ -76,24 +76,19 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="hero">
-                <video
-                  autoplay
-                  muted
-                  loop
-                  playsinline
-                  poster="./assets/image.webp"
-                >
-                  <source
-                    src="./assets/REVISED_OCTACUT(LANDSCAPE).webm"
-                    type="video/webm"
-                  />
-                  <img
-                    src="./assets/image.webp"
-                    alt="Video not supported"
-                    style="width: 100%; height: 100vh; object-fit: cover"
-                  />
-                  Your browser does not support the video tag.
-                </video>
+                <!-- Desktop Video -->
+<video id="desktopVideo" class="desktop-video" autoplay muted loop playsinline>
+  <source src="./assets/REVISED_OCTACUT(LANDSCAPE).webm" type="video/webm">
+  <source src="./assets/REVISED_OCTACUT(LANDSCAPE).mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<!-- Mobile Video -->
+<video id="mobileVideo" class="mobile-video" autoplay muted loop playsinline>
+  <source src="./assets/REVISED_OCTACUT_mobile.webm" type="video/webm">
+  <source src="./assets/REVISED_OCTACUT_mobile.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
               </div>
             </div>
             <div class="swiper-slide">
@@ -186,5 +181,31 @@
 
     </script>
     <script src="./js/app.js"></script>
+
+<script>
+  function toggleVideos() {
+    const isDesktop = window.innerWidth > 768;
+    const desktopVid = document.getElementById('desktopVideo');
+    const mobileVid = document.getElementById('mobileVideo');
+    if (isDesktop) {
+      desktopVid.style.display = 'block';
+      desktopVid.play();
+      desktopVid.muted = true;
+      mobileVid.pause();
+      mobileVid.currentTime = 0;
+      mobileVid.style.display = 'none';
+    } else {
+      mobileVid.style.display = 'block';
+      mobileVid.play();
+      mobileVid.muted = true;
+      desktopVid.pause();
+      desktopVid.currentTime = 0;
+      desktopVid.style.display = 'none';
+    }
+  }
+  window.addEventListener('DOMContentLoaded', toggleVideos);
+  window.addEventListener('resize', toggleVideos);
+</script>
+
   </body>
 </html>
