@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap 5 CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <!-- Remix Icon CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- Swiper JS CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <title>Octa Cut</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container align-items-center align-items-md-start">
+          <a class="navbar-brand" href="index.html"
+            ><img src="./assets/logo.png" alt="Logo" class="logo"
+          /></a>
+          <button class="d-block d-md-none" id="menu-toggler-btn">
+            <i class="ri-menu-2-line" id="menu-btn-icon"></i>
+          </button>
+          <div class="d-none d-md-flex">
+            <ul class="navbar-nav ms-lg-auto mb-2 mb-lg-0 mt-4 flex-md-row ">
+              <li class="nav-item ms-2">
+                <a class="nav-link" href="our-story.html"
+                  >Our story</a
+                >
+              </li>
+              <li class="nav-item ms-2">
+                <a class="nav-link" href="#">The box</a>
+              </li>
+              <li class="nav-item ms-2">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Mobile Menu -->
+          <div id="mobile-menu" class="d-md-none">
+            <ul class="navbar-nav ms-lg-auto mb-2 mb-lg-0 mt-4">
+              <li class="nav-item ms-lg-2">
+                <a class="nav-link" href="our-story.html"
+                  >Our story</a
+                >
+              </li>
+              <li class="nav-item ms-lg-2">
+                <a class="nav-link" href="#">The box</a>
+              </li>
+              <li class="nav-item ms-lg-2">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Swiper -->
+      <div class="slider">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="hero">
+                <video
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  poster="./assets/image.webp"
+                >
+                  <source
+                    src="./assets/MP_Collab_Header_Video_BW.mp4"
+                    type="video/mp4"
+                  />
+                  <img
+                    src="./assets/image.webp"
+                    alt="Video not supported"
+                    style="width: 100%; height: 100vh; object-fit: cover"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="our-story">
+                <img
+                  src="./assets/our-story.png"
+                  alt="Our Story"
+                  class="story-img"
+                />
+                <div class="container">
+                  <h2 class="section-title slide-in-left">Our Story</h2>
+                  <a
+                    href="our-story.html"
+                    class="primary-btn text-uppercase d-inline-block mt-3 py-3 px-5 slide-in-left"
+                    >Learn more</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="collaboration">
+                <img
+                  src="./assets/collaboration-img.png"
+                  alt="collaboration"
+                  class="collaboration-img"
+                />
+                <div class="container">
+                  <h2 class="collaboration-title slide-in-left">
+                    MANNY PACQUIAO x OCTA CUT EXCLUSIVE COLLABORATION
+                  </h2>
+                  <p class="collaboration-text slide-in-left">
+                    Octa-Cut Performance Wear is now offering an exclusive Manny
+                    Pacquioa Jean Box Set. Get yours now!
+                  </p>
+                  <a
+                    href="#"
+                    class="primary-btn text-uppercase d-inline-block mt-3 py-3 px-5 slide-in-left"
+                    >Learn more</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="swiper-button-prev"><i class="ri-arrow-left-s-line"></i></div>
+          <button class="swiper-button-next"><i class="ri-arrow-right-s-line"></i></button>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Bootstrap 5 JS CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        direction: "vertical",
+        slidesPerView: 1,
+        spaceBetween: 0,
+        mousewheel: true,
+        pagination: {
+          el: ".swiper-pagination",
+          type: "progressbar",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+    <script>
+      const sliderTexts = document.querySelectorAll(".slide-in-left");
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+            observer.unobserve(entry.target);
+          } 
+        });
+      });
+
+      sliderTexts.forEach(text => {
+        observer.observe(text);
+      });
+
+    </script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

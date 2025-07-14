@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" style="min-height: 100vh; overflow-x: hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap 5 CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <!-- Remix Icon CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- Swiper JS CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <title>Octa Cut</title>
+  </head>
+  <body style="min-height: 100vh; overflow-x: hidden; background: #000">
+    <header>
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container align-items-center align-items-md-start">
+          <a class="navbar-brand" href="index.html"
+            ><img src="./assets/logo.png" alt="Logo" class="logo"
+          /></a>
+          <button class="d-block d-md-none" id="menu-toggler-btn">
+            <i class="ri-menu-2-line" id="menu-btn-icon"></i>
+          </button>
+          <div class="d-none d-md-flex">
+            <ul class="navbar-nav ms-lg-auto mb-2 mb-lg-0 mt-4 flex-md-row">
+              <li class="nav-item ms-2">
+                <a class="nav-link" href="our-story.html">Our story</a>
+              </li>
+              <li class="nav-item ms-2">
+                <a class="nav-link" href="#">The box</a>
+              </li>
+              <li class="nav-item ms-2">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Mobile Menu -->
+          <div id="mobile-menu" class="d-md-none">
+            <ul class="navbar-nav ms-lg-auto mb-2 mb-lg-0 mt-4">
+              <li class="nav-item ms-lg-2">
+                <a class="nav-link" href="our-story.html">Our story</a>
+              </li>
+              <li class="nav-item ms-lg-2">
+                <a class="nav-link" href="#">The box</a>
+              </li>
+              <li class="nav-item ms-lg-2">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="space-top">
+        <h2 id="title">MANNY PACQUIAO X OCTACUT EXCLUSIVE COLLABORATION</h2>
+      </div>
+      <div class="parallax-section">
+        <div class="custom-container">
+          <img src="./assets/our-story-bg.png" alt="" id="bg" />
+          <img src="./assets/confetti-3.png" alt="" id="confetti" />
+        </div>
+      </div>
+      <div class="extra-space">
+        <div id="description">
+          <p>
+            This collaboration features limited edition stamped Pacquiao denim
+            in your choice of wash, an autographed photo celebrating the
+            fighter's heritage, and more.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-lg-4 col-md-3 mt-4 d-flex flex-column justify-content-center align-items-start"
+          >
+            <img
+              src="./assets/manny-foundation.png"
+              alt="Manny Foundation"
+              class="manny-foundation-img img-fluid"
+            />
+            <img
+              src="./assets/octa-cut.png"
+              alt="Octa-Cut Performance Wear"
+              class="octa-cut-img mt-3 img-fluid"
+            />
+          </div>
+          <div class="col-lg-3 col-md-3 mt-4">
+            <ul class="footer-link-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">Manny x Octacut</a></li>
+              <li><a href="#">Limited Ed. Box</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-3 mt-4">
+            <h4 class="footer-title text-uppercase">Our Newsletter</h4>
+            <a href="#" class="primary-btn text-uppercase d-inline-block"
+              >Sign up</a
+            >
+          </div>
+          <div class="col-lg-2 col-md-3 mt-4">
+            <h4 class="footer-title text-uppercase">Follow Us</h4>
+            <div class="d-flex">
+              <a href="#" class="social-link"
+                ><i class="ri-facebook-circle-fill"></i
+              ></a>
+              <a href="#" class="social-link"
+                ><i class="ri-youtube-fill"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <p class="copyright-text">
+          &copy;2025
+          <a href="https://octacut.com/" target="_blank">OCTACUT.COM</a>, ALL
+          RIGHTS RESERVED
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const bg = document.getElementById("bg");
+      const confetti = document.getElementById("confetti");
+      const title = document.getElementById("title");
+      const desc = document.getElementById("description");
+
+      window.addEventListener("scroll", () => {
+        let value = window.scrollY;
+        console.log("width: ", window.innerWidth);
+        console.log(value);
+        let titleTransform = Number(
+          title.style.transform.slice(11).slice(0, -2)
+        );
+        confetti.style.bottom = `-${value * 0.2}%`;
+        if (window.innerWidth > 767) {
+          if (value >= 720) {
+            desc.style.opacity = 1;
+            desc.style.transform = `translateY(0px)`;
+          } else if (value >= 350) {
+            title.style.transform = `translateY(450px)`;
+            desc.style.opacity = 1;
+            desc.style.transform = `translateY(${
+              -470 + (value * 1.3 - 470)
+            }px)`;
+          } else {
+            title.style.transform = `translateY(${value * 1.3}px)`;
+            desc.style.opacity = 0;
+          }
+        } else {
+          if (value > 490) {
+            desc.style.opacity = 1;
+            desc.style.transform = `translateY(0px)`;
+          } else if (value > 180) {
+            title.style.transform = `translateY(240px)`;
+            desc.style.opacity = 1;
+            desc.style.transform = `translateY(${
+              -300 + (value * 1.2 - 300)
+            }px)`;
+          } else {
+            title.style.transform = `translateY(${value * 1.3}px)`;
+            desc.style.opacity = 0;
+          }
+        }
+
+        // if (value >= 800) {
+        //   desc.style.top = "60%";
+        // } else if (value >= 350) {
+        //   title.style.position = "absolute";
+        //   title.style.top = `40%`;
+        //   desc.style.position = "fixed";
+        //   desc.style.opacity = 1;
+        //   desc.style.top = "64%";
+        //   desc.style.bottom = "auto";
+        // } else {
+        //   title.style.position = "fixed";
+        //   title.style.top = `${value * 0.06 + 20}%`;
+        //   title.style.bottom = `auto`;
+        //   desc.style.opacity = 0;
+        // }
+      });
+    </script>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>
